@@ -1,0 +1,11 @@
+es:
+  carts:
+    index:
+      title: Carro
+      resource: el carro
+      product: Producto
+      quantity: Cantidad
+      price: Precio
+      subtotal: Subtotal
+      tax: Impuesto
+      total: Total

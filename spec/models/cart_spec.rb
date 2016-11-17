@@ -39,10 +39,10 @@ RSpec.describe Cart, type: :model do
         total = 0
 
         Cart.all.each do |cart|
-          total += cart.product_price.round / 100.0 * cart.quantity
+          total += cart.product_price.round(2) * cart.quantity
         end
 
-        expect(total).to be Cart.get_total
+        expect(total).to eq Cart.get_total
       end
 
       it 'should get the total tax' do
@@ -50,7 +50,7 @@ RSpec.describe Cart, type: :model do
       end
 
       it 'should get the subtotal' do
-        expect(Cart.get_total).to eq(Cart.get_total * 0.85)
+        expect(Cart.get_subtotal).to eq(Cart.get_total * 0.85)
       end
 
       it 'should be equal the tax plus the subtotal to the total' do

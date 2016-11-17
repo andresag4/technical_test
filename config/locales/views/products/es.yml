@@ -1,0 +1,13 @@
+es:
+  products:
+    index:
+      title: Productos
+      resource: el producto
+      name: Nombre
+      tag: Etiqueta
+      price: Precio
+      one: Porducto
+      other: Productos
+    form:
+      title: Producto
+      back: Ir a productos

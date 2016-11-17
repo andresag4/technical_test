@@ -1,0 +1,11 @@
+en:
+  carts:
+    index:
+      title: Cart
+      resource: the cart
+      product: Product
+      quantity: Quantity
+      price: Price
+      subtotal: Subtotal
+      tax: Tax
+      total: Total

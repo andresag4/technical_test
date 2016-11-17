@@ -5,8 +5,7 @@ class Cart < ActiveRecord::Base
   validates_numericality_of :quantity, greater_than: 0
   validates_uniqueness_of :product_id
 
-  delegate :price, to: :product, prefix: true
-
+  delegate :price, :name, to: :product, prefix: true
 
   def self.get_total_tax
     self.get_total * 0.15
@@ -20,9 +19,9 @@ class Cart < ActiveRecord::Base
     total = 0
 
     Cart.all.each do |cart|
-      total += cart.product_price.round / 100.0 * cart.quantity
+      total += cart.product_price.round(2) * cart.quantity
     end
 
-    total.round
+    total
   end
 end

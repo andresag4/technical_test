@@ -1,0 +1,13 @@
+en:
+  products:
+    index:
+      title: Products
+      resource: the product
+      name: Name
+      tag: Tag
+      price: Price
+      one: Porduct
+      other: Products
+    form:
+      title: Product
+      back: Go to products
