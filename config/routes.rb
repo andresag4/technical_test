@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  resources :products, except: [:show]
+
+  # Get the cart view.
+  get '/cart', to: 'cart#index', as: :get_cart
+
+  # Adds a product to the cart.
+  match '/add/:product_id', to: 'cart#add', as: :add_product, via: [:patch, :put]
+
+  # Removes one element of the product from the cart.
+  match '/remove/:product_id', to: 'cart#remove', as: :remove_product, via: [:patch, :put]
+
+  # Removes the product from the cart.
+  match '/remove_all/:product_id', to: 'cart#remove_all', as: :remove_all_product, via: [:patch, :put]
+
+  # Gets a new row for the cart.
+  get '/get_row/:product_id', to: 'cart#get_row', as: :get_row
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -51,6 +68,5 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     #   end
 end

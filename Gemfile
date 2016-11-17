@@ -4,6 +4,29 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 #ruby-gemset=test-gemset
 
+## Gems I added
+# begin
+
+# RSpec for Rails-3+
+gem 'rspec-rails', '~> 3.5'
+
+# Collection of testing matchers extracted from Shoulda
+gem 'shoulda-matchers', '3.1.1'
+
+# ClientSideValidations for Ruby on Rails.
+gem 'client_side_validations', '4.2.0'
+
+# The font-awesome font bundled as an asset for the rails asset pipeline
+gem 'font-awesome-rails', '4.5.0.1'
+
+# Use Bootstrap for structure
+gem 'bootstrap-sass', '~> 3.3.6'
+
+# Page loading
+gem 'pace-rails'
+
+# end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record

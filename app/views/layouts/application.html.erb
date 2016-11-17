@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>TechnicalTest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="wrapper">
+  <header>
+    <div class="logo"><i class="fa fa-bug" aria-hidden="true"></i> Technical <b>Test</b></div>
+    <%= link_to t('products.form.title'), products_path %>
+    <%= link_to t('carts.index.title'), get_cart_path %>
+  </header>
+  <div class="container">
+    <div class="content-wrapper">
+      <%= yield %>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="info">
+      <strong>Copyright &copy; 2016.</strong> All rights reserved.
+    </div>
+  </footer>
+</div>
 </body>
 </html>
