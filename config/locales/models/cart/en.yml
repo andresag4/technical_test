@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    attributes:
+      cart:
+        product_id: Product
+        quantity: Quantity

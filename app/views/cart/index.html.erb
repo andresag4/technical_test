@@ -1,0 +1,69 @@
+<h1>
+  <%= t 'products.index.title' %>
+</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= t 'products.index.name' %></th>
+    <th><%= t 'products.index.price' %></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Add', 'javascript:;', class: 'btn btn-flat transparent-blue edit-cart-button',
+                        data: {url: add_product_path(product.id)} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<h1>
+  <%= t 'carts.index.title' %>
+</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= t 'carts.index.product' %></th>
+    <th><%= t 'carts.index.quantity' %></th>
+    <th><%= t 'carts.index.price' %></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody id="cart-table">
+  <% @cart.each do |cart| %>
+      <%= render 'cart_row', cart: cart %>
+  <% end %>
+  </tbody>
+</table>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= t 'carts.index.subtotal' %></td>
+    <td id="subtotal"><%= Cart.get_subtotal %></td>
+  </tr>
+  <tr>
+    <td><%= t 'carts.index.tax' %></td>
+    <td id="tax"><%= Cart.get_total_tax %></td>
+  </tr>
+  <tr>
+    <td><%= t 'carts.index.total' %></td>
+    <td id="total"><%= Cart.get_total %></td>
+  </tr>
+  </tbody>
+</table>

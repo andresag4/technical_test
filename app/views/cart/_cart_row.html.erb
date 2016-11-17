@@ -1,0 +1,11 @@
+<tr id="<%= "product_#{cart.product.id}" %>">
+  <td><%= cart.product_name %></td>
+  <td id="<%= "product_#{cart.product.id}_quantity" %>"><%= cart.quantity %></td>
+  <td><%= cart.product_price %></td>
+  <td><%= link_to '<i class="fa fa-plus"></i>'.html_safe, 'javascript:;', class: 'btn btn-flat transparent-blue edit-cart-button',
+                  data: {url: add_product_path(cart.product.id)} %></td>
+  <td><%= link_to '<i class="fa fa-minus"></i>'.html_safe, 'javascript:;', class: 'btn btn-flat transparent-green edit-cart-button',
+                  data: {url: remove_product_path(cart.product.id)} %></td>
+  <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, 'javascript:;', class: 'btn btn-flat transparent-red edit-cart-button',
+                  data: {url: remove_all_product_path(cart.product.id)} %></td>
+</tr>

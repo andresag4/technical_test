@@ -41,3 +41,51 @@ I am also adding the gem `shoulda-matchers` which provides more methods for test
 
 The spec files are located under `/spec/models`. There is a file corresponding to each model in which I test the 
 validations, the methods and even associations from each one.
+
+## Style
+
+I added the gems for Bootstrap, ClientSideValidation and Font-awesome.
+I changed the style from the views and added some css.
+The assets changed where these:
+```
+/assets/javascripts/*
+/assets/stylesheets/*
+```
+
+In the cart javascript I added a function that is called when you interact with the cart.
+It is basically used to add/remove items. I used AJAX in this method.
+
+In the stylesheets, I mainly edited the `general.css` which has some style for the tables I use.
+
+## Adding the functionality
+
+I added some routes that will help me interact with the cart.
+
+The routes you may use are:
+
+```
+/products # Basically the scaffold from products structure
+/cart # This is where you interact with the cart, adding/removing items.
+```
+
+I also added `i18n`. Every model and view have their respective `i18n` file.
+
+This are located under `/config/locales/*`
+
+
+
+
+## Files edited
+
+```
+/app/assets/*
+/app/controllers/*
+/app/models/*
+/app/views/*
+
+/config/locales/*
+
+/spec/models/*
+
+Gemfile
+```
