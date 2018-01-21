@@ -1,8 +1,5 @@
 # Technical Test
 
-This purpose of this test is to develop my skills as developer.
-I am going to explain step by step what I was doing and how or why I do it that way.
-
 ## Creating the project
 
 When I start a project the first thing I do is to add the ruby version to the Gemfile as well as assigning a new gemset.
